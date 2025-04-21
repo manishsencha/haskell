@@ -1,16 +1,15 @@
-double_odd_half_even :: Int -> Int 
-
-double_odd_half_even num = if num `rem` 2 == 0 then num `div` 2 else num * 2
+doubleOddHalfEven :: Int -> Int
+doubleOddHalfEven num = if even num then num `div` 2 else num * 2
 
 main = do
-putStrLn "Double if number is odd and Half if number is even\n"
-putStrLn "num = 45"
+  putStrLn "Double if number is odd and Half if number is even\n"
+  putStrLn "num = 45"
 
-let oddNum = double_odd_half_even 45
-print oddNum
+  let oddNum = doubleOddHalfEven 45
+  print oddNum
 
-putStrLn "num = 34"
+  putStrLn "num = 34"
 
-let evenNum = double_odd_half_even 34
+  let evenNum = doubleOddHalfEven 34
 
-print evenNum
+  print evenNum
